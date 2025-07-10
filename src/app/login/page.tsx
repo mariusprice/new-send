@@ -15,7 +15,7 @@ export default function LoginPage() {
     if (username === 'admin' && password === 'admin') {
       console.log('Login successful');
       setError('');
-      router.push('/dashboard');
+      router.push('/dashboard/configuration');
     } else {
       setError('Invalid username or password');
     }
