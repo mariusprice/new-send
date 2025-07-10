@@ -37,8 +37,11 @@ export async function POST(req: NextRequest) {
   try {
     await sesClient.send(new SendEmailCommand(params));
     return NextResponse.json({ message: `Test email sent to ${email}` });
-  } catch (error: any) {
+  } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: error.message || 'Failed to send test email' }, { status: 500 });
+    if (error instanceof Error) {
+      return NextResponse.json({ error: error.message || 'Failed to send test email' }, { status: 500 });
+    }
+    return NextResponse.json({ error: 'An unknown error occurred' }, { status: 500 });
   }
 } 

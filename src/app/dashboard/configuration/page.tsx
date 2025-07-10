@@ -37,7 +37,7 @@ export default function ConfigurationPage() {
       } else {
         setSupabaseTestResult(`Error: ${data.error}`);
       }
-    } catch (error) {
+    } catch (_error) {
       setSupabaseTestResult('An unexpected error occurred.');
     } finally {
       setIsTestingSupabase(false);
@@ -62,7 +62,7 @@ export default function ConfigurationPage() {
       } else {
         setVercelTestResult(`Error: ${data.error}`);
       }
-    } catch (error) {
+    } catch (_error) {
       setVercelTestResult('An unexpected error occurred.');
     } finally {
       setIsTestingVercel(false);
@@ -78,7 +78,7 @@ export default function ConfigurationPage() {
       <div className="w-full max-w-2xl p-8 space-y-6 bg-white rounded-lg shadow-md">
         <h1 className="text-2xl font-bold text-center text-gray-900">Initial Configuration</h1>
         <p className="text-sm text-center text-gray-600">
-          First, let's set up your Supabase and Vercel connections.
+          First, let&apos;s set up your Supabase and Vercel connections.
         </p>
         <div className="space-y-6">
           <div className="p-4 border rounded-md">

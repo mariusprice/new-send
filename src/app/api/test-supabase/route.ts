@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
     // Attempt to fetch a simple query, for example, list user sessions.
     // This is a lightweight way to check if the credentials are valid.
-    const { data, error } = await supabase.auth.admin.listUsers();
+    const { error } = await supabase.auth.admin.listUsers();
 
     if (error) {
       // If the error indicates an authentication problem, we can be more specific.
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true, message: 'Supabase connection successful!' });
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json({ success: false, error: 'An unexpected error occurred.' }, { status: 500 });
   }
 } 

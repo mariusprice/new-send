@@ -31,7 +31,7 @@ export default function SESSetupPage() {
       } else {
         setTestResult(`Error: ${data.error}`);
       }
-    } catch (error) {
+    } catch (_error) {
       setTestResult('An unexpected error occurred.');
     } finally {
       setIsTesting(false);
