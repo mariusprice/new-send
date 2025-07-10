@@ -31,6 +31,7 @@ export default function SESSetupPage() {
       } else {
         setTestResult(`Error: ${data.error}`);
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (_error) {
       setTestResult('An unexpected error occurred.');
     } finally {

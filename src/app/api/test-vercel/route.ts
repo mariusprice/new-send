@@ -21,6 +21,7 @@ export async function POST(req: NextRequest) {
       const errorData = await response.json();
       return NextResponse.json({ success: false, error: `Vercel API error: ${errorData.error.message}` }, { status: response.status });
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (_error) {
     return NextResponse.json({ success: false, error: 'An unexpected error occurred.' }, { status: 500 });
   }

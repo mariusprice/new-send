@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true, message: 'Supabase connection successful!' });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (_error) {
     return NextResponse.json({ success: false, error: 'An unexpected error occurred.' }, { status: 500 });
   }

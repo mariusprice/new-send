@@ -37,6 +37,7 @@ export default function ConfigurationPage() {
       } else {
         setSupabaseTestResult(`Error: ${data.error}`);
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (_error) {
       setSupabaseTestResult('An unexpected error occurred.');
     } finally {
@@ -62,6 +63,7 @@ export default function ConfigurationPage() {
       } else {
         setVercelTestResult(`Error: ${data.error}`);
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (_error) {
       setVercelTestResult('An unexpected error occurred.');
     } finally {
